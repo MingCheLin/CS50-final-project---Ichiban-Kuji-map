@@ -1,0 +1,80 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+html, body, main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.full-page {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.custom_button {
+
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    border: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.custom_button:hover {
+    background-color: #f4f4f4;
+}
+
+.locate_button {
+    /* material from https://icons8.com/icons/set/locate */
+    background-image: url(/static/bullseye.png);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.allshop_button{
+    font-size: 20px;
+}
+
+#searchbar {
+    height: 35px;
+    font-size: 18px;
+    padding: 6px;
+    float: left;
+}
+#searchbar:hover {
+    background-color: #f4f4f4;
+}
+
+.list_element {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.list_element div{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.list_element div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+.list_active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
