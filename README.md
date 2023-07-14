@@ -4,6 +4,11 @@
 My project including 3 part.
 Respectively scrap part, map part and server part.
 
+2023/07/14 update:
+I found that the Ichiban Kuji official website has stoped updating.
+And Banpresto has already make a map themselves.
+https://www.google.com/maps/d/u/0/viewer?fbclid=IwAR3sFrdTEmLC7EGKO8QUNFTcj9i1a_cih0yrmISzOfqMKpAqSJA39fBQ6Ec&mid=1xjxl-O_Cum5GMA703wKVJ42Ve3xcbXY&ll=23.910635472238102%2C120.97382509999998&z=8
+
 ## Scrap
 I use scrapy to scrap info from Banpresto official website.
 There are two kind of info.
@@ -76,3 +81,16 @@ And the conmunicate communication agreement is json.
 ### address2CSV and address2geocode
 These two python file will transfer address to CSV file to submit to TGOS platform.
 After get the result, it will be update into IchibanKuji.db file.
+
+
+## Demo
+1. run the scraper to scrape the Ichiban Kuji info and their geocode.
+```
+$ scrapy crawl IchibanKuji
+$ scrapy crawl geocode
+```
+
+2. run the Flask
+```
+$ flask run
+```
