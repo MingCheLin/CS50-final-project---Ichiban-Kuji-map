@@ -1,9 +1,6 @@
 import os
 import time
 from flask import Flask, flash, redirect, render_template, request, jsonify
-from flask_session import Session
-from tempfile import mkdtemp
-from werkzeug.security import check_password_hash, generate_password_hash
 import sqlite3
 import json
 
@@ -65,3 +62,6 @@ def allshop():
         shop_json.append({"shop_name":shop[0], "shop_address":shop[1], "shop_tel":shop[2], "lat":shop[3], "lon":shop[4]})
     con.close()
     return jsonify(shop_json)
+
+if __name__ == '__main__':
+    app.run('0.0.0.0')
