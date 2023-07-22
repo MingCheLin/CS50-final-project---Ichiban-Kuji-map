@@ -29,7 +29,7 @@ def index():
 def map():
     if request.method == "POST":
         ## use SQLite database
-        con = sqlite3.connect('./static/ichiban_kuji.db')
+        con = sqlite3.connect('./ichiban_kuji.db')
         cur = con.cursor()
         ## receive POST from searchbar
         kuji_name = request.form.get("search")

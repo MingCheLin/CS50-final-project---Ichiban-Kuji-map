@@ -27,7 +27,7 @@ class IchibankujiSpider(scrapy.Spider):
         for kuji in kuji_data:
             kujis.append((kuji["kuji_master_id"], kuji["kuji_master_name"]))
         # connect to sql library
-        con = sqlite3.connect('./static/ichiban_kuji.db')
+        con = sqlite3.connect('./ichiban_kuji.db')
         cursor = con.cursor()
         cursor.execute("DELETE FROM kujis;")
         cursor.executemany("INSERT INTO kujis (kuji_id, kuji_name) VALUES (?, ?);", kujis)
